@@ -12,8 +12,10 @@ const port = process.env.PORT || 8000;
 // niche middleware heiii
 
 app.use(express.json());
-app.use(cors())
-app.use(cors({ origin: "https://apnabhaibyshlok.netlify.app/" }));
+app.use(cors({
+  origin: "https://apnabhaibyshlok.netlify.app/", 
+  methods: ["GET", "POST"],
+}));
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
