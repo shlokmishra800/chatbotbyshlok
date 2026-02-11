@@ -294,7 +294,7 @@ const botResponses = {
 const normalizedText = text.toLowerCase().trim()
 
 
-const botResponse = botResponses[normalizedText] || "sorry i dont understand that bhaiya jii!!! "
+const botResponse = botResponses[normalizedText] || "sorry i dont understand that bhaiya jii!!!";
 
 
 const bot = await botModel.create({

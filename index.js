@@ -13,9 +13,10 @@ const port = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(cors({
-  origin: "https://apnabhaibyshlok.netlify.app/", 
+  origin: "https://apnabhaibyshlok.netlify.app",
   methods: ["GET", "POST"],
 }));
+
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -31,5 +32,6 @@ mongoose
 app.use("/bot/v1", chatbotRoutes);
 
 app.listen(port, () => {
-  console.log(`SERVER listening on port ${port}`);
+ console.log(`SERVER listening on port ${port}`);
+
 });
