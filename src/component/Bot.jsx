@@ -24,11 +24,12 @@ const Bot = () => {
 
 
       if (res.status === 200) {
-        setMessages([
-          ...messages,
-          { text: res.data.userMessage, sender: "user" },
-          { text: res.data.botMessage, sender: "bot" },
-        ]);
+       setMessages(prevMessages => [
+  ...prevMessages,
+  { text: res.data.userMessage, sender: "user" },
+  { text: res.data.botMessage, sender: "bot" },
+]);
+
       }
     } catch (error) {
       console.error("Error found:", error);
